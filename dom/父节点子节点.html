@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul class="box">
+      <li class="sp">我是1</li>
+      <li>我是2</li>
+      <li>我是3</li>
+      <li>我是4</li>
+      <li>我是5</li>
+    </ul>
+    <script>
+      var sp = document.querySelector(".sp");
+      // 1.parentNode  得到离元素最近的父级节点
+      console.log(sp.parentNode);
+      var box = document.querySelector(".box");
+      //2.childNodes所有的子节点 包含 元素节点 文本节点等
+      console.log(box.childNodes);
+      //3.children获取所有的子节点元素
+      console.log(box.children);
+      //4.firstChild第一个子节点 不管文本节点还是元素节点
+      console.log(box.firstChild);
+      console.log(box.lastChild);
+      //5.firstElementChild 返回第一个元素节点
+      console.log(box.firstElementChild);
+      console.log(box.lastElementChild);
+      //实际开发的写法 没有兼容性
+      console.log(box.children[3]);
+    </script>
+  </body>
+</html>

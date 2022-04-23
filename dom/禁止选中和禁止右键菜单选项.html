@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+    </div>
+    <script>
+      var div = document.querySelector("div");
+      //静止右键菜单
+      div.addEventListener("contextmenu", function (e) {
+        e.preventDefault()
+      });
+      //禁止选中
+      div.addEventListener("selectstart", function (e) {
+        e.preventDefault()  //阻止默认事件 
+      });
+    </script>
+  </body>
+</html>

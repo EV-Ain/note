@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // console.log(Object);
+      var c={}
+      // console.log(c.__proto__===Test.prototype.__proto__);
+      //对象原型和原型对象里都有constructor属性 他成为构造函数,因为他指向构造函数本身
+      //很多情况都需要利用constructor属性 指回原来的构造函数
+      function Test(a, b) {
+        this.name = a;
+        this.age = b;
+      }
+      // Test.prototype.sing = function () {
+      //   console.log('唱歌');
+      // };
+      // Test.prototype.movie = function () {
+      //   console.log('唱歌');
+      // };
+
+      //覆盖了prototype所以里面没有constructor属性
+      Test.prototype = {
+        //手动指回Test
+        constructor:Test,
+        sing: function () {
+          console.log('唱歌');
+        },
+        movie: function () {
+          console.log('电影');
+        },
+      };
+      var a = new Test("张三", 18);
+      console.log(Test);
+      // console.log(a.__proto__);
+      // console.log(a.__proto__===Test.prototype);
+    </script>
+  </body>
+</html>

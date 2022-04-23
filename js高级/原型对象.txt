@@ -1,0 +1,35 @@
+//prototype
+function Test(a,b){
+      this.name=a
+      this.age=b
+    }
+    Test.prototype.sing=function(){
+      console.log(666);
+    }
+    var a=new Test('张三',18)
+    a.sing()
+}
+Text就是构造函数
+每个构造函数里都有一个prototype原型对象
+prototype原型对象里面有个constructor属性  坑死jua课特
+constructor属性会指向这个构造函数本身
+prototype原型对象   返回的是一个对象 
+每个对象里都有一个__proto__对象原型
+__proto__对象原型指向构造函数prototype原型对象
+
+a就是实例对象 a是一个对象
+a实例对象找sing方法会去__proto__里找 __proto__里面没有就会去prototype里找
+constructor会指向Test这个构造函数
+
+
+
+
+Test构造函数有prototype原型对象 prototype原型对象里有个属性constructor指向本身构造函数Test
+Test构造函数constructor会指向对象原型__proto__ A对象实例
+对象实例是个对象 里有个__proto__ 指向原型对象prototype 
+
+
+prototype也是个对象 就说明有个__proto__
+prototype.__proto__指向Objet原型对象
+Objet prototype指向构造函数 Objet构造函数
+objet prototype是一个对象就会有__proto__ 指向null

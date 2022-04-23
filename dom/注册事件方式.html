@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>传统方式</button>
+    <button>方法监听事件</button>
+    <button>ie9 attachEvent</button>
+    <script>
+      var btn=document.querySelectorAll('button')
+      //传统方式注册事件 只能alert一次
+      btn[0].onclick=function(){
+        alert(111)
+      }
+      btn[0].onclick=function(){
+        alert(222)
+        // alert(111)
+      }
+
+      //事件监听注册事件 addEventListener 
+      //(1)里面必须是字符串 必须加引号 没有on
+      //同一个元素 同一个事件可以添加多个监听器(事件处理程序)
+      btn[1].addEventListener('click',function () {
+        alert(333)
+      })
+      btn[1].addEventListener('click',function () {
+        alert(444)
+      })
+
+      // 谷歌浏览器没用 ie可以用
+      btn[2].attachEvent('onclick',function(){
+        alert(1111)
+      })
+    </script>
+  </body>
+</html>

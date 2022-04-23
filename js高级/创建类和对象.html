@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Abc {
+        constructor(uname, age) {
+          this.name = uname;
+          this.age = age;
+        }
+      }
+
+      //创建类必须写在类的后面
+      //es6类没有变量提升
+      var abc = new Abc("nz", 18);
+      console.log(typeof abc);
+      //类里面的属性和方法一定要加this
+      //1.通过class关键词创建类,类名习惯性大写
+      //2.类里面有个constructor函数,来接收传递过来的参数,同时返回实例对象
+      //3.constructor函数 只要new生产实例,就会自动调用这个函数,如果不写这个函数也会自动生成
+    </script>
+  </body>
+</html>

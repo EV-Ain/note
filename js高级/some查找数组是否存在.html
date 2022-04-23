@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //some查找数组满足条件
+    //返回布尔类型
+    //如果找到第一个满足条件 终止循环 不再继续查找
+    var arr=[38,34,54]
+   var newArr= arr.some(function(value){
+      return value>=0
+    })
+    console.log(newArr);
+  </script>
+</body>
+</html>

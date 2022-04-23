@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //为某个函数开启严格模式
+      function fn() {
+        "use strict";
+      }
+      //严格模式
+      ("use strict");
+      //后面js代码都是严格模式执行代码
+      //严格模式
+      //1.我们变量名必须先声明再使用
+      // num=10
+      //console.log(num);//报错
+      
+      var a = 10;
+      console.log(a);
+      //2.delete a; 严格模式不能删除已经声明好的变量
+
+      //3.严格模式全局作用域函数中的this是undefined
+      function fun() {
+        console.log(this); //现在是undefined 以前是window
+      }
+      fun();
+
+      //5.严格模式不加new调用,this会报错
+      function Star() {
+        this.sex = "男";
+      }
+      var ldh = new Star();
+      console.log(ldh.sex);
+
+      //6.严格模式函数里面的参数不能重名
+    </script>
+  </body>
+</html>

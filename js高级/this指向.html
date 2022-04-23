@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button>绑定事件</button>
+  <script>
+    //普通函数
+    function fn(){
+      console.log('普通函数this:',this);
+    }
+    fn()  //window
+
+    //对象方法函数
+    var a={
+      fn:function(){
+        console.log('对象函数this',this);
+    }}
+    a.fn()  //指向a
+
+    //构造函数  构造函数this指向这个实例对象b  原型对象里面this也是指向b
+    function Fun(){
+      console.log('构造函数this',this);
+    }
+    var b=new Fun()
+
+    //绑定事件函数  指向函数的调用者
+    var btn=document.querySelector('button')
+    btn.onclick=function(){
+      console.log('绑定事件函数',this);
+      //指向btn
+    }
+
+    //定时器里指向window
+    //立即指行函数也是指向window
+    (function(){
+      console.log('this:',this);
+    })()
+  </script>
+</body>
+</html>

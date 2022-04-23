@@ -1,0 +1,9 @@
+相同点都是改变this指向
+1.call和apply 会调用函数,变且改变内部this指向
+2.call和apply传递的参数不一样,call传递参数arr1,arr2形式,apply必须是数组['']
+3.bind 不会调用函数,可以改变内部this指向
+
+应用场景
+call 经常做继承
+apply经常跟数组有关系 比如借助数学对象实现数组最大最小值
+bind 不调用函数,但还是想改变this指向  比如改变定时器内部this指向

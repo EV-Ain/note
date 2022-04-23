@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //原型是一个对象,也称为prototype为原型对象
+    //原型的作用就是共享方法
+    //每一个构造函数都有一个prototype属性,指向一个对象,这个对象的属性和方法都被构造函数使用
+    //可以把不变的方法直接写在prototype对象上,所有的实例都可以共享这个方法
+    function Test(a,b){
+      this.name=a
+      this.age=b
+    }
+    Test.prototype.sing=function(){
+      console.log(666);
+    }
+    var a=new Test('张三',18)
+    var b=new Test('李四',20)
+    a.sing()
+    b.sing()
+  </script>
+</body>
+</html>

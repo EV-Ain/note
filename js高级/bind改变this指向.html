@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>点击</button>
+    <script>
+      function fn(a,b) {
+        console.log(a+b);
+        console.log(this);
+      }
+      var a = {
+        name: "张三",
+      };
+      fn.bind(a); //不会调用fn this.指向a
+      var f=fn.bind(a,1,2)
+      f()
+      //返回一个新函数
+
+      var btn=document.querySelector('button')
+      btn.onclick=function(){
+        this.disabled=true  //指向btn
+        //setTimeout(function(){    //定时器函数里面this指向window
+          //this.disabled=false
+        //},3000)
+        setTimeout(function (){
+          this.disabled=false
+        }.bind(this), 2000);
+      }
+    </script>
+  </body>
+</html>

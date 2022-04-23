@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .bb {
+        width: 500px;
+        height: 500px;
+        background-color: black;
+      }
+      .ez {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bb">
+      <div class="ez">儿子</div>
+    </div>
+    <script>
+      var bb = document.querySelector(".bb");
+      bb.addEventListener("click", function () {
+        alert("bb");
+      });
+      var ez = document.querySelector(".ez");
+      //阻止冒泡事件
+      ez.addEventListener("click", function (e) {
+        alert("ez");
+        e.stopPropagation();
+      },false);
+    </script>
+  </body>
+</html>

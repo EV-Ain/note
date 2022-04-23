@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //prototype原型对象
+      //__proto__对象原型
+      //对象都有一个属性__proto__指向构造函数的prototype原型对象
+      //对象可以使用构造函数prototype原型对象的属性和方法,就是因为对象有__proto__原型存在
+      function Test(a, b) {
+        this.name = a;
+        this.age = b;
+      }
+      Test.prototype.sing = function () {
+        // console.log(666);
+      };
+      var a = new Test("张三", 18);
+      var b = new Test("李四", 20);
+      // a.sing();
+      // b.sing();
+      //如果a对象上没有sing()方法就会去__proto__里的构造函数原型对象protoype身上找
+      console.log(Test.prototype)
+      // console.log(a.__proto__);
+      // console.log(a.__proto__===Test.prototype);
+    </script>
+  </body>
+</html>

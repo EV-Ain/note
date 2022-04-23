@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //Object.defineProperty定义新属性或修改原有的属性
+    //Object.defineProperty('修改的名字',修改,说明)
+    //第三个参数description说明:以{}形式修改
+    //1.value:设置默认属性的值,默认undefined
+    //2.writable:值是否重写,true/false 默认false
+    //3.enumerable:目标属性是否可以被遍历. 默认false
+    //4.configurable:目标属性是否可以被删除或者是否可以再次修改特性 默认false
+    var obj={
+      id:1,
+      name:"张三",
+      age:18,
+      sex:'男'
+    }
+    Object.defineProperty(obj,'id',{
+      //如果为false 就是不允许修改这个值 默认false
+      writable:false,
+      //enmerable不允许遍历 默认false
+      // enumerable:false
+    })
+    obj.id=2
+    console.log(obj.id);  //1
+    console.log(Object.keys(obj));
+  </script>
+</body>
+</html>

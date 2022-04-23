@@ -1,0 +1,36 @@
+onclick  //鼠标点击事件 常用在button
+onfocus  //获得焦点事件 常用在input
+onblur   //失去焦点事件 常用在input
+onmouseover  //鼠标经过事件
+onmouseout   //鼠标离开
+onmousemove  //鼠标移动触发
+onmouseup    //鼠标弹起触发
+onmousedown  //鼠标按下触发
+
+e.target       //返回触发事件的对象
+e.srcElment    //返回触发事件的对象 非标准 ie6-8使用
+e.type         //返回事件类型 比如 click mouseover 不带on
+e.cancelBubble //阻止冒泡 非标准 ie6-8使用
+e.stopPropagation() //阻止冒泡
+e.returnValue  //阻止默认事件 比如不让连接跳转 非标准 ie6-8使用
+e.preventDefault()   ////阻止默认事件  比如不让连接跳转
+
+//鼠标事件对象
+addEventListener('click',function(e){
+  //鼠标在可视区的X和Y坐标
+  console.log(e.clientX)
+  console.log(e.clientY)
+  //鼠标在页面文档的坐标
+  console.log(e.pageX)
+  console.log(e.pageY)
+  //鼠标对于电脑屏幕的坐标
+  console.log(e.screenX)
+  console.log(e.screenY)
+})
+
+//键盘事件
+onkeyup     //键盘按键松开时触发
+onkeydown   //键盘按下时触发
+onkeypress  //键盘按下时触发 不识别Ctrl shift alt等
+keypress    //区分字母大小写    返回ASCII
+keydown     //事件不区分大小写  返回ASCII
