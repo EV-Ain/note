@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //ES5或取参数
+    function date(a,b,c){
+      console.log(arguments);  //返回对象
+    }
+    date(1,2)
+
+    //ES6 rest参数  rest必须放在最后
+    function data(...args){
+      console.log(args); //返回数组 可以用filter som..等方法
+    }
+    data('结婚','仨脚后跟')
+  </script>
+</body>
+</html>

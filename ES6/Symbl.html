@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //创建Symber
+      let s1 = Symbol("abc");
+      let s2 = Symbol("榨干");
+      console.log(s1 === s2); //false
+
+      //创建Symber
+      let s3=Symbol.for('abc')
+      let s4=Symbol.for('abc')
+      console.log(s3===s4);  //true
+    </script>
+  </body>
+</html>

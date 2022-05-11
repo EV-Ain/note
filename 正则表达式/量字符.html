@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //* 相当于>=0 可以出现0次或者很多次
+    var rg1=/^a*$/
+    console.log(rg1.test(''));   //true
+    console.log(rg1.test('ab')); //false
+    console.log(rg1.test('aaaa')); //true
+
+    //+相当于>=1 可以出现一次或者更多次
+    var rg2=/^a+$/
+    console.log(rg2.test(''));   //false
+    console.log(rg2.test('aaaa'));   //true
+
+    //? 相当于1||0
+    var rg3=/^a?$/
+    console.log(rg3.test(''));   //true
+    console.log(rg3.test('a'));   //true
+    console.log(rg3.test('aaaa'));   //false
+
+    //{3} 重复三次
+    //{3,} 大于等于三次
+    //{3,9} 大于等于三次  并且少于9次
+  </script>
+</body>
+</html>

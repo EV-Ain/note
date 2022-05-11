@@ -1,0 +1,19 @@
+//背景图片平铺  //默认平铺
+background:no-repeat  //背景不平铺
+background:repeat-x   //往右平铺
+background:repeat-y   //往下平铺 
+
+//改变背景图片位置
+background-positon:center top  //中间上居中  
+background-positon:right center //往右中间居中
+background-positon:right  //靠右垂直居中
+background-positon:top    //水平居中
+background-positon:20px 50px //x20 y50
+background-positon:20px   //x20px 另外垂直居中
+background-positon:center  20px //水平居中 y20px  //左右居中
+
+//背景图像固定
+background-attachment:scroll || fixed   //scroll滚动 fixed固定
+
+//简写
+background

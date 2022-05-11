@@ -1,0 +1,35 @@
+display:inline  //内联元素
+display:block   //转块级元素
+display:inline-block  //行内块元素
+
+//块级元素  //div p ul ol li h1~h6
+1.独占一行
+2.高度,宽度,外边距内间距都可以控制
+3.宽度默认为父级的100%
+4.文字类(p,h1~h6)不能放块级元素 特别是div
+5.可以包含任何标签
+
+//行内元素 也叫内联元素 //a strong b em i span
+1.一行显示多个
+2.宽度直接设置无效
+3.默认是宽度本身的宽度
+4.只能容纳文本 或者 其他行内元素
+
+//行内块元素 img input td
+1.有空白间隙 一行显示多个
+2.默认宽度就是本身宽度
+3.宽度 行高 外边距 内间距可以控制
+
+//显示隐藏
+display:none   //隐藏元素 不占据位置
+visibility     //隐藏位置 占据以前位置
+overflow:hidden  //溢出隐藏
+overflow:scroll   //溢出部分显示滚动条  不溢出也显示
+overflow:auto    //溢出显示滚动条   不溢出不显示
+
+
+//取消表单轮廓线
+outline:none 
+
+//防止拖拽轮廓线
+resize:none

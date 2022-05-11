@@ -1,0 +1,28 @@
+//设置字体系列
+font-family:'微软雅黑,宋体'
+//设置文字大小
+font-size:20px  //谷歌默认16px
+//设置字体粗细
+font-weight:bold      //加粗 低于400不加粗  700变粗
+//设置文本样式
+font-style:italic    //斜体
+font-style:normal    //斜体设置不斜体
+
+//对齐文本
+text-align:center    //让盒子里的文字水平居中  //左右居中
+
+//文本隐藏
+text-overflow:ellipsis    //文字超出显示省略号
+//装饰文本
+text-decoration:none   //默认没有装饰线
+text-underline     //下划线
+text-overline     //上划线
+text-through     //删除线
+
+//文本缩进
+text-indent:10px   //文本第一行缩进多少距离  负值往左缩进
+text-indent:2em  //如果当前文字大小2px  em就是文字大小像素
+
+//行间距
+line-height:16px   //上间距 文本高度 下间距 控制文本之前到距离
+line-height:盒子高度  //实现垂直居中  上下居中

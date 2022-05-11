@@ -1,0 +1,3 @@
+//解决图片空白缝隙
+vertical-align: middle | top | bottom 
+display:block

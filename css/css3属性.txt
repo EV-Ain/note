@@ -1,0 +1,50 @@
+//计算盒子宽度calc函数
+width:calc(100% - 20px);  //百分百像素-20px
+
+//图片模糊设置
+filter:blur(10px);    //数值越大越模糊
+
+//过度动画
+transition:变化属性 花费时间 动画类型 延迟事件
+transition:width 1s ease 1s;   
+
+过度动画写在本身上,谁做动画给谁加
+
+//2d旋转
+transform:rotate(45deg);  //顺时针旋转45度
+transform-origin:50% 50%;  /中心点旋转
+transform:scale(1.5);  //放大1.5倍
+
+//动画
+animation-name:动画名称;
+animation-duration:动画持续时间;
+animation-iteration-count:动画重复次数;
+animation-delay:动画开始时间;
+animation-fill-mode:动画结束时间;
+animation-play-state:动画播放次数;
+animation-timing-function:动画播放速度;
+//lineaer 匀速 ease-in 先慢后快  ease-out 先快后慢  ease-in-out 先慢后快再慢
+//steps(n) 每隔n帧执行一次 steps(n,start) 每隔n帧执行一次,从start开始 
+animation-direction:动画播放方向; //默认是normal,反方向为alternate
+
+
+//3d
+x轴:水平向右 x右是正 x左是负
+y轴:垂直向下 y下是正 y上是负
+z轴:屏幕垂直 z下是正 z上是负
+
+//3d移动
+transform:translate3d( x,y,z);
+//3d旋转
+transform:rotate3d(x,y,z,deg);
+//3d呈现
+transform-style:preserve-3d;  //开启子元素3d立体效果
+
+//background-size
+background-size:cover;  //背景图片填充整个容器  可能背景图片显示不全
+background-size:contain;  //高度宽度等比例拉伸 高度或宽度铺满盒子就不会拉伸 可能有部分空白
+background-size:auto;  //自动计算宽高比例
+
+//盒子模型
+box-sizing:border-box;   //css3盒子模型 padding和border不会撑大盒子
+box-sizing:content-box;  //传统盒子模型 盒子包含 padding border

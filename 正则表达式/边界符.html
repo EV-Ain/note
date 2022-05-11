@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var rg=/abc/    //包含abc连起来都是true  
+    console.log(rg.test('assabc')); //true  
+    
+    var reg=/^abc/   //必须a开头
+    console.log(reg.test('abcdd'));  //true
+    console.log(reg.test('aabcdd'));  //false
+
+    var reg1=/^abc$/   //必须a开头 c结尾
+    console.log(reg1.test('abbbc')); //false
+  </script>
+</body>
+</html>

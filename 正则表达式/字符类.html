@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var rg = /[abc]/; //只要包含 a 或者 b 或者 c都是true
+      console.log(rg.test("shjbhdbkl")); //true
+
+      var rg1 = /^[abc]$/;   //三选一必须 a 或者 b 或者 c开头 
+      console.log(rg1.test("abc")); //false
+      console.log(rg1.test("a")); //true
+      console.log(rg1.test("aa")); //false
+
+      var rg2 = /^[a-z]$/;   //a-z字母都可以
+      console.log(rg2.test("abc")); //false
+      console.log(rg2.test("1"));   //false
+      console.log(rg2.test("A"));   //false
+
+      var rg3 = /^[^a-z]$/;  //外面^开头..  里面^取反
+      console.log(rg3.test("A"));
+    </script>
+  </body>
+</html>

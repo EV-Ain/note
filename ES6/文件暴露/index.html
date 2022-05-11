@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script type="module">
+    //1.通过导入形式
+    // //统一
+    // import * as m1 from "./统一暴露.js";
+    // console.log(m1);
+    // m1.test()
+    // //默认
+    // import * as m2 from './默认暴露.js'
+    // console.log(m2);
+    // m2.default.test()
+    // //分别
+    // import * as m3 from './分别暴露.js';
+    // m3.test()
+
+    //2.通过结构赋值形式
+    import {name,test} from './统一暴露.js';
+    console.log(name);
+
+    // import {name as zs} from './默认暴露.js';
+    // console.log(zs);
+
+    //简约形式  针对默认暴露
+    import mr from './默认暴露.js'
+    console.log(mr);
+  </script>
+</body>
+</html>

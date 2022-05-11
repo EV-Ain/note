@@ -1,0 +1,5 @@
+a:link{}       //未访问的链接
+a:visited{}    //已被访问的链接
+a:active{}     //鼠标正在按下没有弹起
+
+input:facus    //焦点设置

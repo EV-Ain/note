@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //声明变量
+      let a;
+      let b, c, d;
+      let e = 123,
+        f = "snm",
+        h = [];
+
+      //1.变量不能重复声明
+      //let str='test'
+      //let str='abc'  //报错
+
+      //2.块级作用域  全局,函数,eval
+      //if else while for
+      {
+        let test='测试'
+        var name='张三'
+      }
+      //console.log(test);//报错
+      console.log(name); //张三
+
+      //3.不存在变量提升
+      console.log(son);
+      let son='李四'  //报错
+
+      //4.不影响作用域链
+    </script>
+  </body>
+</html>
