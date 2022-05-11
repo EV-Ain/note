@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //深拷贝拷贝多层,每一级的数据都会拷贝
+      var a = {
+        id: 1,
+        name: "张三",
+        msg: {
+          age: 18,
+        },
+      };
+      var b = {};
+      //封装函数
+      function kb(newobj,oldobj){
+        for(var k in a){
+          //获取属性值
+          var item=oldobj[k]
+          //判断是不是数组
+          if (item instanceof Array) {
+            newobj[k]=[]
+            kb(newobj[k],item)
+          }else if(item instanceof Object){
+            newobj[k]={}
+            kb(newobj[k],item)
+          }else{
+            newobj[k]=item
+          }
+        }
+      }
+      kb(b,a)
+    </script>
+  </body>
+</html>
